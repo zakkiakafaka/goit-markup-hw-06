@@ -604,7 +604,7 @@ footer{
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
     padding-top: 60px;
@@ -746,9 +746,6 @@ footer{
 
 .email-form {
     display: flex;
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     background-color: transparent;
     color: white;
@@ -767,6 +764,7 @@ footer{
 
 .button-signup {
     display: inline-flex;
+    font-family: Roboto;
     align-items: center;
     margin-left: 12px;
     border-radius: 4px;
@@ -776,7 +774,7 @@ footer{
     padding-right: 28px;
     min-width: 200px;
     height: 50px;
-
+    justify-content: center;
     color: white;
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);
@@ -785,11 +783,22 @@ footer{
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-     text-decoration: none;
+    text-decoration: none;
     text-align: center;
     cursor: pointer;
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-signup:hover,
+.button-signup:focus {
+    background-color: white;
+    color: var(--accent-color);
+    
+}
+
+.button-signup:hover .paperplane-svg,
+.button-signup:focus .paperplane-svg {
+    fill: var(--accent-color);
 }
 
 .signup b {
@@ -802,6 +811,13 @@ footer{
     text-transform: uppercase;
     color: #FFFFFF;
 }
+
+.paperplane-svg {
+    margin-left: 10px;
+    fill: white;
+}
+
+
 
 /* ===== portfolio.html ===== */
 
@@ -943,11 +959,13 @@ footer{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .modal {
@@ -958,6 +976,13 @@ footer{
     width: 530px;
     height: 580px;  
     background-color: white;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
     }
 
 .modal-button {
@@ -968,4 +993,33 @@ footer{
     height: 30px;
     border-radius: 100%;
     border-color: rgba(0, 0, 0, 0);
+}
+
+/* ===== Modal form ===== */
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-label {
+    width: 100%;
+}
+
+.user-name-input {
+    width: 100%;
+}
+
+.user-tel-input {
+    width: 100%;
+}
+
+.user-mail-input {
+    width: 100%;
+}
+
+.modal-form-user-text {
+    width: 100%;
+    height: 120px;
+    
 }
